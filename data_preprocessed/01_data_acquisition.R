@@ -47,4 +47,4 @@ str(raw_table)
 #see what I have to make shure
 head(raw_table, 11)
 
-#view
+view
