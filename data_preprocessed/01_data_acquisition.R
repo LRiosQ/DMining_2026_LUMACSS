@@ -73,4 +73,41 @@ head(df_care, 11)
 # View the main indicator table in a spreadsheet-like viewer
 view(df_care)
 
-#Check it out – my previous commits have been deleted
+#Check it out – my previous commits have been DELETED...it looks like there are
+
+# 5. DATA PREPARATION (Renaming before Joining) --------------------------------
+
+# We only need the 'countryiso3code', 'date', and the actual 'value'
+# Let's rename 'value' to something descriptive for each indicator
+
+df_family_clean <- df_family %>%
+  select(countryiso3code, date, family_work_val = value)
+
+df_care_clean <- df_care %>%
+  select(countryiso3code, date, care_work_val = value)
+
+df_labor_clean <- df_labor %>%
+  select(countryiso3code, date, labor_part_val = value)
+
+
+# 6. MERGING THE TABLES (Joining) -------------------------------------------
+
+# We use left_join to combine them based on Country and Year
+# This creates our "Master Table" for analysis
+
+master_df <- df_care_clean %>%
+  left_join(df_labor_clean, by = c("countryiso3code", "date")) %>%
+  left_join(df_family_clean, by = c("countryiso3code", "date"))
+
+# 7. FINAL INSPECTION ------------------------------------------------------
+
+# Check the first few rows of the merged dataset
+head(master_df)
+
+# Check how many non-NA values we have for our research question
+summary(master_df)
+
+# Save the merged master file as a CSV for easy access later
+write.csv(master_df, "data_clean/gender_care_economy_master.csv", row.names = FALSE)
+
+message("Master dataset successfully merged and saved to data_clean/!")
