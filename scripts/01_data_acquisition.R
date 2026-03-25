@@ -1,7 +1,7 @@
 # --- PACKAGE INSTALLATION (Run only if needed) ---
-# install.packages("httr")
-# install.packages("jsonlite")
-# install.packages("tidyverse")
+install.packages("httr")
+install.packages("jsonlite")
+install.packages("tidyverse")
 
 library(httr)      # Facilitates HTTP connections
 library(jsonlite)  # Handles JSON data format
@@ -108,8 +108,8 @@ head(master_df)
 summary(master_df)
 
 # Save the merged master file as a CSV for easy access later
-write.csv(master_df, "data_clean/gender_care_economy_master.csv", row.names = FALSE)
+write.csv(master_df, "data_preprocessed/gender_care_economy_master.csv", row.names = FALSE)
 
-message("Master dataset successfully merged and saved to data_clean/!")
+message("Master dataset successfully merged and saved to data_preprocessed/!")
 
 #Checking AGAIN
