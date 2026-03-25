@@ -6,13 +6,13 @@ This repository contains the code for a small data mining project developed as p
 
 University of Lucerne
 
-Student Name  
-Course: Data Mining for the Social Sciences using R
+Student Name: Laura Rios  
+Course: Data Mining for Political and Social Sciences using R
 Term: Spring 2026
 
 ## Project Goal
 
-The goal of this project is to collect and analyze data from an online source (API or web scraping) in order to answer a research question relevant to political or social science.
+The goal of this project is to collect and analyze data from an online source (API) in order to answer a research question relevant to political or social science.
 
 The project should demonstrate:
 
@@ -24,15 +24,16 @@ The project should demonstrate:
 
 ## Research Question
 
-*(Replace with your own question)*
-
-Example:
-- How frequently do political speeches contain populist rhetoric?
-
+*"How is women’s economic participation related to the distribution of unpaid care work across countries?"*
 
 ## Data Source
 
-Describe the data source here.
+The data source is the World Bank API: https://genderdata.worldbank.org/en/help#AccessAPI, were I selected 4 indicators:
+
+1) Unpaid Care Work	(SG.TIM.UWRK.FE). Proportion of time (24h) spent by women on unpaid domestic and care work.
+2) Female Labor Participation	(SL.TLF.CACT.FE.ZS)	Labor force participation rate, female (% of female population ages 15+).
+3) Contributing Family Workers (SL.FAM.WORK.FE.ZS)	Contributing family workers, female (% of female employment).
+4) GDP per capita (PPP)	(NY.GDP.PCAP.PP.CD)	GDP per capita based on purchasing power parity (current international $).
 
 Example:
 
@@ -43,8 +44,10 @@ Example:
 
 ## Repository Structure
 
-/code     scripts used to collect/process data
-/data     output datasets (not tracked/pushed by git)
+/scripts     scripts used to collect/process data
+/plots     plots generated through the process
+/data_raw    generated jsons for every indicator            
+/data_preprocessed    master dataset
 README.md   project description
 
 
@@ -54,7 +57,7 @@ To reproduce this project:
 
 1. Clone the repository
 2. Install required R packages
-3. Run the scripts in the `code/` folder
+3. Run the scripts in the `scripts/` folder
 
 All data should be generated automatically by the scripts.
 
