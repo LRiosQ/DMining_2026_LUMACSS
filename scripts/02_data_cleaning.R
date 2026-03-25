@@ -1,4 +1,12 @@
-Problemas con Github
+# A. LOAD LIBRARIES
+# Libraries must be reload in every new script
+library(tidyverse)
+
+# B. LOAD THE PREVIOUSLY SAVED DATA
+# Instead of downloading again, we read the Master File we created in script 01
+# Make sure the path matches where you saved the CSV
+master_df <- read.csv("data_preprocessed/gender_care_economy_master.csv")
+
 # 8. DATA CLEANING: FILTERING FOR MOST RECENT VALUE (MRV) -------------------
 
 # Not all the countries have the same data, so
