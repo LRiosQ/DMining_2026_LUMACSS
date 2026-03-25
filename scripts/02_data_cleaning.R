@@ -80,7 +80,7 @@ ggplot(mrv_data, aes(x = care_work_val, y = labor_part_val)) +
                   box.padding = 0.5, 
                   point.padding = 0.5) +
   
-  # Add professional titles and axis labels
+  # Add titles and axis labels
   labs(
     title = "Unpaid Care Work vs. Female Labor Participation",
     subtitle = "Labels: 5 countries with highest and 5 with lowest family work share",
@@ -89,5 +89,22 @@ ggplot(mrv_data, aes(x = care_work_val, y = labor_part_val)) +
     size = "Contributing Family Workers (%)"
   ) +
   
-  # Use a clean, professional theme for the Master's project
   theme_minimal()
+
+# --- SAVE THE LAST PLOT ---
+
+# 1. Create a variable for the plot (optional but recommended)
+final_plot <- last_plot()
+
+# 2. Save the plot in the project folder
+# Specify the filename, the plot object, and the dimensions
+ggsave(filename = "data_preprocessed/care_vs_labor_plot.png", 
+       plot = final_plot, 
+       width = 10, 
+       height = 7, 
+       units = "in", 
+       dpi = 300)
+
+# 3. Message to confirm
+message("Plot successfully saved in data_preprocessed folder!")
+
