@@ -32,10 +32,10 @@ ggplot(mrv_data, aes(x = care_work_val, y = labor_part_val)) +
   geom_smooth(method = "lm", color = "tomato", se = FALSE) + # Add a trend line
   labs(
     title = "Unpaid Care Work vs. Female Labor Participation",
-    subtitle = "Most Recent Value (MRV) per Country",
+    subtitle = "Most Recent Value (MRV) per country",
     x = "Time spent on unpaid care (% of day)",
     y = "Female Labor Force Participation (%)",
-    size = "Family Workers (%)",
+    size = "Contributing Family Workers (%)",
     caption = "Source: World Bank Gender Data API"
   ) +
   theme_minimal()
