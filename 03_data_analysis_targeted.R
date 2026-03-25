@@ -4,11 +4,10 @@
 library(tidyverse)
 library(ggrepel)
 
-# 2. Load the data from your preprocessed folder
-# Make sure the file exists in this path
+# 2. Load the data from the preprocessed folder
 mrv_data <- read.csv("data_preprocessed/gender_care_economy_master.csv")
 
-# 3. Define the list of countries for your research (ISO3 codes)
+# 3. List of countries of interest for my research (ISO3 codes)
 target_countries <- c("CHE", "MEX", "CRI", "URY", "CHL", "COL", "ARG")
 
 # 4. Create the labels for the plot
