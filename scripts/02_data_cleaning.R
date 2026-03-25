@@ -1,7 +1,7 @@
 # A. LOAD LIBRARIES
 # Libraries must be reload in every new script
-install.packages("ggrepel")
 library(tidyverse)
+install.packages("ggrepel")
 library(ggrepel) # To handle overlapping text labels
 
 # B. LOAD THE PREVIOUSLY SAVED DATA
