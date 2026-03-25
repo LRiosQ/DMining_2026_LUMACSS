@@ -1,6 +1,8 @@
 # A. LOAD LIBRARIES
 # Libraries must be reload in every new script
+install.packages("ggrepel")
 library(tidyverse)
+library(ggrepel) # To handle overlapping text labels
 
 # B. LOAD THE PREVIOUSLY SAVED DATA
 # Instead of downloading again, we read the Master File we created in script 01
@@ -42,3 +44,50 @@ ggplot(mrv_data, aes(x = care_work_val, y = labor_part_val)) +
 
 # Save your first plot for your Master's presentation
 ggsave("plots/care_vs_labor_mrv.png", width = 10, height = 7)
+
+# To see the 5 counties with more "Contributing Family Workers"
+mrv_data %>%
+  select(countryiso3code, family_work_val, care_work_val, labor_part_val) %>%
+  arrange(desc(family_work_val)) %>%
+  head(5)
+
+# --- DATA VISUALIZATION WITH SMART LABELS ---
+
+# 1. Prepare the data for selective labeling
+# Arrange by 'family_work_val' to identify the extremes (highest and lowest)
+mrv_data <- mrv_data %>%
+  arrange(desc(family_work_val)) %>%
+  # Create a temporary rank column (1 = highest family work, etc.)
+  mutate(label_priority = row_number()) %>% 
+  # Create a new column 'country_label'
+  # If it's in the Top 5 or Bottom 5, keep the ISO3 code; otherwise, leave it blank ("")
+  mutate(country_label = ifelse(label_priority <= 5 | label_priority > (n() - 5), 
+                                countryiso3code, ""))
+
+# 3. Generate the Scatter Plot
+ggplot(mrv_data, aes(x = care_work_val, y = labor_part_val)) +
+  # Points: size depends on contributing family work, color is dark blue, and they are semi-transparent
+  geom_point(aes(size = family_work_val), color = "midnightblue", alpha = 0.5) +
+  
+  # Add a trend line (Linear Model) in orange to see the correlation
+  geom_smooth(method = "lm", color = "darkorange", se = TRUE) +
+  
+  # Add the smart labels using ggrepel
+  # This automatically moves the text so it doesn't overlap with points or other labels
+  geom_text_repel(aes(label = country_label), 
+                  size = 3.5, 
+                  fontface = "bold",
+                  box.padding = 0.5, 
+                  point.padding = 0.5) +
+  
+  # Add professional titles and axis labels
+  labs(
+    title = "Unpaid Care Work vs. Female Labor Participation",
+    subtitle = "Labels: 5 countries with highest and 5 with lowest family work share",
+    x = "Unpaid care work (% of 24h day)",
+    y = "Female Labor Force Participation Rate (%)",
+    size = "Contributing Family Workers (%)"
+  ) +
+  
+  # Use a clean, professional theme for the Master's project
+  theme_minimal()
