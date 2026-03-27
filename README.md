@@ -39,7 +39,7 @@ Example:
 
 - API: https://example-api.com
 - Documentation: https://example-api.com/docs
-- Access method: HTTP GET requests
+- Access method: To collect the data, I used the World Bank Open Data API. Access was gained programmatically via the R language, using the specialised WDI package. Technically, this process relies on HTTP GET requests sent to the endpoints.
 
 
 ## Repository Structure
