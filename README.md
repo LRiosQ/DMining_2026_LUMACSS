@@ -7,12 +7,12 @@ This repository contains the code for a small data mining project developed as p
 University of Lucerne
 
 Student Name: Laura Rios  
-Course: Data Mining for Political and Social Sciences using R
+Course: Data Mining for Political and Social Sciences using R.
 Term: Spring 2026
 
 ## Project Goal
 
-The goal of this project is to collect and analyze data from an online source (API) in order to answer a research question relevant to political or social science.
+The goal of this project is to collect and analyze data from an online source (API) to answer a research question relevant to political or social science.
 
 The project should demonstrate:
 
@@ -28,7 +28,7 @@ The project should demonstrate:
 
 ## Data Source
 
-The data source is the World Bank API: https://genderdata.worldbank.org/en/help#AccessAPI, were I selected 4 indicators:
+The data source is the World Bank API: https://genderdata.worldbank.org/en/help#AccessAPI, where I selected 4 indicators:
 
 1) Unpaid Care Work	(SG.TIM.UWRK.FE). Proportion of time (24h) spent by women on unpaid domestic and care work.
 2) Female Labor Participation	(SL.TLF.CACT.FE.ZS)	Labor force participation rate, female (% of female population ages 15+).
