@@ -45,11 +45,11 @@ Integrating the insights from BFA Global’s 2026 report and the comparative dat
 
 4.2 Comparing the Extremes: The "Top 5" vs. The "Low 5"
 
-![](Unpaid Care Work vs. Female Labor Participation.png){fig-align="center"}
-
 The outliers identified in the "Top 5"—Ethiopia (ETH), Pakistan (PAK), Tanzania (TZA), Albania (ALB), and Bhutan (BTN)—represent the peak of the informal care-labor trap. In these nations, the bubble sizes are massive. This indicates that the "labor" being performed is largely subsistence-based or within family businesses, where the line between "household chores" and "productive work" is completely blurred.
 
-In contrast, the "Low 5"—led by Switzerland (CHE) and its European peers—reside in the upper-left quadrant. Here, we see the result of a formalized social contract. The care burden is low (under 15%), and participation is high. Crucially, the bubble size is nearly non-existent. In Switzerland, when a woman works, she is almost certainly an employee with a contract, a bank account, and a social security number. This transition from "Family Worker" to "Employee" is the pivotal shift required for the financial inclusion of women globally.
+![](Final_Rplot.png)
+
+In contrast, the "Low 5"—led by Norway (NWY) and its European peers—reside in the upper-left quadrant. Here, we see the result of a formalized social contract. The care burden is low (under 15%), and participation is high. Crucially, the bubble size is nearly non-existent. In Norway, when a woman works, she is almost certainly an employee with a contract, a bank account, and a social security number. This transition from "Family Worker" to "Employee" is the pivotal shift required for the financial inclusion of women globally.
 
 ## 5. Conclusion: Efficiency, Power, and the "Threat Point".
 
@@ -61,7 +61,7 @@ One of the most significant conclusions of this analysis is that the "Society of
 
 5.2 The Role of the "Threat Point"
 
-Following the theoretical framework of Jayachandran and Voena (2026), we can conclude that while the care burden remains high, the "threat point" (or reservation position) of women in the household remains structurally weakened. This explains a critical phenomenon in our data: even when the broader economy grows, the situation for women in high-care burden countries does not automatically improve. Their bargaining position is stagnant because they lack the "time surplus" necessary to accumulate independent assets. Without assets or formal income, their ability to negotiate a better distribution of domestic labor within the household is severely limited, creating a self-perpetuating cycle of exclusion.
+Following the theoretical framework of Jayachandran and Voena (2026), we can conclude that while the care burden remains high, the "threat point" (or reservation position) of women in the household remains structurally weakened. This explains a critical phenomenon in our data: even when the broader economy grows, the situation for women in high-care burden countries does not automatically improve. Their bargaining position is stagnant because they lack the "time surplus" necessary to accumulate independent assets. Without assets or formal income, their ability to negotiate a better distribution of domestic labour within the household is severely limited, creating a self-perpetuating cycle of exclusion.
 
 5.3 The Income Trap in the "Top 5"
 
@@ -77,7 +77,7 @@ No computational analysis is complete without a critical self-assessment.
 
 2.  Cultural Definitions of Care: The X-axis relies on self-reported data. In many households, caring for an elderly parent is seen as a "natural" family obligation rather than "work," leading to a systematic underreporting of care hours.
 
-3.  The Limits of Linearity: While the orange trend line provides a useful average, social reality is often non-linear. Tipping points in infrastructure (like universal childcare) can cause non-linear explosions in labor participation.
+3.  The Limits of Linearity: While the orange trend line provides a useful average, social reality is often non-linear. Tipping points in infrastructure (like universal childcare) can cause non-linear explosions in labour participation.
 
 ## Bibliography
 
