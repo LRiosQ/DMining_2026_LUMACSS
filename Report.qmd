@@ -1,0 +1,31 @@
+---
+title: "Interpretation of the Data Mining Analysis"
+author: "Laura Ríos-Q"
+format: pdf
+editor: visual
+---
+
+## 1. Research Question and Problem Statement: The "Double Burden"
+
+The fundamental inquiry driving this research is rooted in a persistent paradox of modern development: why does female labor force participation (FLFP) remain systematically suppressed in specific geographic clusters despite decades of economic growth and educational parity? This project posits that the primary obstacle is the structural invisibility of the "Care Economy." In mainstream neoclassical economics, labor is often reductionistically treated as a binary choice between "leisure" and "market work." However, as evidenced by recent literature on intra-household dynamics (Jayachandran & Voena, 2026), this "choice" is non-existent for millions of women. It is, instead, a forced negotiation dictated by gendered power structures and the high-intensity demands of unpaid domestic labor.
+
+The "Double Burden" is not merely a social inconvenience; it is a critical economic constraint that alters the internal bargaining power within the family unit. According to the collective models of household behavior, a woman’s "threat point"—her fallback position outside the household—is directly undermined by her time poverty. When a woman dedicates a disproportionate share of her day to unpaid care, her ability to accumulate "human capital" and "market experience" diminishes. This creates a feedback loop: lower market potential reduces her bargaining power at home, which in turn leads to a higher assignment of domestic chores, further suppressing her labor participation.
+
+This research investigates the empirical correlation between the time women dedicate to unpaid care and their resulting footprint in the formal labor force. By utilizing "Contributing Family Workers" as a critical proxy, I analyze not just the quantity of labor, but its precarious quality. Jayachandran and Voena (2026) highlight that even when women contribute to household income, their "relative resource share" often remains significantly low in many developing contexts. This suggests that labor participation does not automatically translate into financial agency if the underlying structure of care remains unchanged. The research question seeks to quantify this "Care-Labor" trade-off to provide a data-driven foundation for policies that redistribute care as a path to financial inclusion.\
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
