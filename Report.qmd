@@ -47,7 +47,7 @@ Integrating the insights from BFA Global’s 2026 report and the comparative dat
 
 The outliers identified in the "Top 5"—Ethiopia (ETH), Pakistan (PAK), Tanzania (TZA), Albania (ALB), and Bhutan (BTN)—represent the peak of the informal care-labor trap. In these nations, the bubble sizes are massive. This indicates that the "labor" being performed is largely subsistence-based or within family businesses, where the line between "household chores" and "productive work" is completely blurred.
 
-![](Final_Rplot.png)
+![](plots/Final_Rplot.png)
 
 In contrast, the "Low 5"—led by Norway (NWY) and its European peers—reside in the upper-left quadrant. Here, we see the result of a formalized social contract. The care burden is low (under 15%), and participation is high. Crucially, the bubble size is nearly non-existent. In Norway, when a woman works, she is almost certainly an employee with a contract, a bank account, and a social security number. This transition from "Family Worker" to "Employee" is the pivotal shift required for the financial inclusion of women globally.
 
@@ -118,3 +118,5 @@ Moving Files: To keep the root directory clean, I moved scripts and reports usin
 Housekeeping: I removed temporary or redundant files with file.remove() to ensure only the final, necessary data is hosted on GitHub.
 
 Path Management: I used getwd() to verify my working directory, ensuring that scripts inside the /scripts folder can correctly "reach out" to data in /data_preprocessed using the ../ notation.
+
+\
