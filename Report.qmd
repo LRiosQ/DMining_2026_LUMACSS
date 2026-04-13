@@ -30,11 +30,11 @@ This pipeline allowed the script to "hunt" for the most recent valid observation
 
 A core tenet of this Master’s work is the commitment to Open Science. To ensure that this analysis is not a "black box," I adopted a strictly modular script architecture.
 
-	•	Script 01 (Extraction): This script is dedicated to the API interaction. It handles the raw JSON-to-dataframe conversion and archives a timestamped version of the data in a data_raw/ directory.
+-   Script 01 (Extraction): This script is dedicated to the API interaction. It handles the raw JSON-to-dataframe conversion and archives a timestamped version of the data in a data_raw/ directory.
 
-	•	Script 02 (Processing & Analysis): This script reads the raw data, applies the MRV logic, and performs the normalization required to compare percentages across different national reporting standards.
+-   Script 02 (Processing & Analysis): This script reads the raw data, applies the MRV logic, and performs the normalization required to compare percentages across different national reporting standards.
 
-	•	Portability: By using a structured directory hierarchy and relative file paths, the entire project is portable. Any researcher with an R environment can reproduce these exact visualizations by simply running the scripts.
+-   Portability: By using a structured directory hierarchy and relative file paths, the entire project is portable. Any researcher with an R environment can reproduce these exact visualizations by simply running the scripts.
 
 ## 
 4. Expanded Analysis: The Intersection of Care and Financial Health
@@ -74,24 +74,24 @@ In final reflection, the path to gender financial health must lead through the r
 
 No computational analysis is complete without a critical self-assessment.
 
-	1	The Statistical Silence: As observed during development, the World Bank API often returns NA for the "Unpaid Care" indicator in many regions. This "data silence" is a form of policy neglect.
+1.  The Statistical Silence: As observed during development, the World Bank API often returns NA for the "Unpaid Care" indicator in many regions. This "data silence" is a form of policy neglect.
 
-	2	Cultural Definitions of Care: The X-axis relies on self-reported data. In many households, caring for an elderly parent is seen as a "natural" family obligation rather than "work," leading to a systematic underreporting of care hours.
+2.  Cultural Definitions of Care: The X-axis relies on self-reported data. In many households, caring for an elderly parent is seen as a "natural" family obligation rather than "work," leading to a systematic underreporting of care hours.
 
-	3	The Limits of Linearity: While the orange trend line provides a useful average, social reality is often non-linear. Tipping points in infrastructure (like universal childcare) can cause non-linear explosions in labor participation.
+3.  The Limits of Linearity: While the orange trend line provides a useful average, social reality is often non-linear. Tipping points in infrastructure (like universal childcare) can cause non-linear explosions in labor participation.
 
 ## Bibliography
 
-	•	BFA Global. (2026). Financial Health with a Gender Perspective: Resilience and Autonomy in Latin America. \[Online Report\].
+-   BFA Global. (2026). Financial Health with a Gender Perspective: Resilience and Autonomy in Latin America. \[Online Report\].
 
-	•	Jayachandran, S., & Voena, A. (2026). Women's Power in the Household. NBER Working Paper Series, No. 34605.
+-   Jayachandran, S., & Voena, A. (2026). Women's Power in the Household. NBER Working Paper Series, No. 34605.
 
-	•	World Bank. (2024). World Development Indicators: Unpaid Care Work (SG.TIM.UWRK.FE).
+-   World Bank. (2024). World Development Indicators: Unpaid Care Work (SG.TIM.UWRK.FE).
 
-	•	World Bank. (2024). World Development Indicators: Female Labor Participation (SL.TLF.CACT.FE.ZS).
+-   World Bank. (2024). World Development Indicators: Female Labor Participation (SL.TLF.CACT.FE.ZS).
 
-	•	World Bank. (2024). World Development Indicators: Contributing Family Workers (SL.FAM.WORK.FE.ZS).
+-   World Bank. (2024). World Development Indicators: Contributing Family Workers (SL.FAM.WORK.FE.ZS).
 
-	•	R Core Team. (2023). R: A Language and Environment for Statistical Computing.
+-   R Core Team. (2023). R: A Language and Environment for Statistical Computing.
 
-	•	Slowikowski, K. (2023). ggrepel: Smart Labels for ggplot2. R package version 0.9.3.
+-   Slowikowski, K. (2023). ggrepel: Smart Labels for ggplot2. R package version 0.9.3.
