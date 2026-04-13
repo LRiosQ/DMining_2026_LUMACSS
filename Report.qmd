@@ -1,17 +1,29 @@
 ---
-title: "Interpretation of the Data Mining Analysis"
-author: "Laura Ríos-Q"
+title: "The Invisible Architecture of Inequality: Unpaid Care Work, Labor Participation, and the Gendered Financial Gap. Interpretation of Data Mining Analysis"
+author: "Laura Ríos-Quiroz"
 format: pdf
 editor: visual
 ---
 
-## 1. Research Question and Problem Statement: The "Double Burden"
+1. Research Question and Problem Statement: The "Double Burden"
 
 The fundamental inquiry driving this research is rooted in a persistent paradox of modern development: why does female labor force participation (FLFP) remain systematically suppressed in specific geographic clusters despite decades of economic growth and educational parity? This project posits that the primary obstacle is the structural invisibility of the "Care Economy." In mainstream neoclassical economics, labor is often reductionistically treated as a binary choice between "leisure" and "market work." However, as evidenced by recent literature on intra-household dynamics (Jayachandran & Voena, 2026), this "choice" is non-existent for millions of women. It is, instead, a forced negotiation dictated by gendered power structures and the high-intensity demands of unpaid domestic labor.
 
 The "Double Burden" is not merely a social inconvenience; it is a critical economic constraint that alters the internal bargaining power within the family unit. According to the collective models of household behavior, a woman’s "threat point"—her fallback position outside the household—is directly undermined by her time poverty. When a woman dedicates a disproportionate share of her day to unpaid care, her ability to accumulate "human capital" and "market experience" diminishes. This creates a feedback loop: lower market potential reduces her bargaining power at home, which in turn leads to a higher assignment of domestic chores, further suppressing her labor participation.
 
-This research investigates the empirical correlation between the time women dedicate to unpaid care and their resulting footprint in the formal labor force. By utilizing "Contributing Family Workers" as a critical proxy, I analyze not just the quantity of labor, but its precarious quality. Jayachandran and Voena (2026) highlight that even when women contribute to household income, their "relative resource share" often remains significantly low in many developing contexts. This suggests that labor participation does not automatically translate into financial agency if the underlying structure of care remains unchanged. The research question seeks to quantify this "Care-Labor" trade-off to provide a data-driven foundation for policies that redistribute care as a path to financial inclusion.\
+This research investigates the empirical correlation between the time women dedicate to unpaid care and their resulting footprint in the formal labor force. By utilizing "Contributing Family Workers" as a critical proxy, I analyze not just the quantity of labor, but its precarious quality. Jayachandran and Voena (2026) highlight that even when women contribute to household income, their "relative resource share" often remains significantly low in many developing contexts. This suggests that labor participation does not automatically translate into financial agency if the underlying structure of care remains unchanged. The research question seeks to quantify this "Care-Labor" trade-off to provide a data-driven foundation for policies that redistribute care as a path to financial inclusion.
+
+2\. Data Access Pipeline and Mining Techniques
+
+The technical architecture of this project was designed to move beyond static, "dead" datasets. In the field of Computational Social Science, the ability to build live, reproducible pipelines is what distinguishes a modern analyst from a traditional researcher.
+
+2.5 Detailed Methodology: The "GET" Request and Data Wrangling
+
+From a technical standpoint, the data acquisition was executed via a series of HTTP GET requests sent to the World Bank’s Open Data API endpoints. While I automated this process using the WDI package in R, the underlying mechanism is a standard REST API protocol. This involved constructing precise URLs for four multidimensional indicators: Unpaid Care (SG.TIM.UWRK.FE), Labor Participation (SL.TLF.CACT.FE.ZS), Family Workers (SL.FAM.WORK.FE.ZS), and GDP per capita (NY.GDP.PCAP.PP.CD).
+
+However, the primary mining challenge—and where the "human" intuition of the researcher comes in—was managing the massive temporal inconsistency of the data. Time Use Surveys (TUS) are notoriously expensive and infrequent. A naive "inner join" of these variables by year would have decimated the sample size, leaving us with a statistically insignificant "Swiss cheese" dataset. To overcome this, I engineered a Most Recent Value (MRV) logic using a group_by and filter sequence in R.
+
+This pipeline allowed the script to "hunt" for the most recent valid observation for each country within a trailing 10-year window. This ensures that a 2023 data point from Switzerland and a 2019 data point from another region can coexist in the same analysis, providing a global "snapshot" that is as current as the available reporting allows. Furthermore, I utilized the ggrepel library to resolve the "labeling problem." In high-density clusters, standard text labels overlap, rendering the chart unreadable. The geom_text_repel function uses a force-directed algorithm to "push" labels away from each other while maintaining a visual link to the data point, ensuring total clarity in the visualization.\
 
 ## Running Code
 
